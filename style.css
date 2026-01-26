@@ -2,6 +2,9 @@ h1 {
     color: purple;
 }
 
+h2 {
+    color: blue
+}
 body {
     width: 50%;
     margin: auto;
@@ -15,15 +18,23 @@ body {
     }
 }
 
+/* editing font size */
 p#intro[
     font-size: 2em;
 ]
 
+/*incorporating different fonts */
 #byline{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     font-size: 1.5em
 }
 
+#article{
+    font-family:Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif
+    font-size: 1em
+}
+
+/* adding border */
 div {
     border: solid 1px
     gray;

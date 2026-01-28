@@ -1,43 +1,41 @@
 <html>
 <head>
-  <!-- titling it-->
-  
   <title>Northwestern Building Filter</title>
   <style>
     html, body { margin:0; padding:20px; height:100%; }
     button { padding:10px 20px; margin:5px; font-size:18px; }
-    .journalism { background:#f4a261; color:#000; }
-    .engineering  { background:#2a9d8f; color:#fff; }
-    .weinberg { background:#e76f51; color:#fff; }
+    .Medill { background:#f4a261; color:#000; }
+    .McCormick  { background:#2a9d8f; color:#fff; }
+    .Weinberg { background:#e76f51; color:#fff; }
     
     .item {
       padding:15px; margin:10px 0;
       font-size:20px; border-radius:5px;
     }
-    .coffee.item { background:#f4a261; }
-    .lunch.item  { background:#2a9d8f; }
-    .desert.item { background:#e76f51; }
+    .Medill.item { background:#5e9596; }
+    .McCormick.item  { background:#3c6a42; }
+    .Weinberg.item { background:#756084; }
     
     .item.hidden { display:none; }
   </style>
 </head>
 <body>
   <button onclick="filter('all')">All</button>
-  <button onclick="filter('coffee')">Coffee</button>
-  <button onclick="filter('lunch')">Lunch</button>
-  <button onclick="filter('desert')">Desert</button>
+  <button onclick="filter('Medill')">Medill</button>
+  <button onclick="filter('McCormick')">McCormick</button>
+  <button onclick="filter('Weinberg')">Weinberg</button>
 
-  <div class="item coffee">Starbucks</div>
-  <div class="item coffee">Ignite Coffee</div>
-  <div class="item coffee">Eureka Cafe</div>
+  <div class="item Medill">Fisk</div>
+  <div class="item Medill">Locy</div>
+  <div class="item Medill">McCormick Foundation Center</div>
   
-  <div class="item lunch">Naf Naf Grill</div>
-  <div class="item lunch">Veggie Grill</div>
-  <div class="item lunch">Potbelly</div>
+  <div class="item McCormick">Tech</div>
+  <div class="item McCormick">Ford Center</div>
+  <div class="item McCormick">Mudd</div>
   
-  <div class="item desert">Dairy Queen</div>
-  <div class="item desert">Andy’s Frozen Custard</div>
-  <div class="item desert">Nana’s Ice Cream</div>
+  <div class="item Weinberg">Kresge</div>
+  <div class="item Weinberg">Harris</div>
+  <div class="item Weinberg">University</div>
 
   <script>
     function filter(cat) {

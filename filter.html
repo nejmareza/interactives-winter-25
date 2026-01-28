@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Restaurant Filter</title>
+  <style>
+    html, body { margin:0; padding:20px; height:100%; }
+    button { padding:10px 20px; margin:5px; font-size:18px; }
+    .coffee { background:#f4a261; color:#000; }
+    .lunch  { background:#2a9d8f; color:#fff; }
+    .desert { background:#e76f51; color:#fff; }
+    
+    .item {
+      padding:15px; margin:10px 0;
+      font-size:20px; border-radius:5px;
+    }
+    .coffee.item { background:#f4a261; }
+    .lunch.item  { background:#2a9d8f; }
+    .desert.item { background:#e76f51; }
+    
+    .item.hidden { display:none; }
+  </style>
+</head>
+<body>
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('coffee')">Coffee</button>
+  <button onclick="filter('lunch')">Lunch</button>
+  <button onclick="filter('desert')">Desert</button>
+
+  <div class="item coffee">Starbucks</div>
+  <div class="item coffee">Ignite Coffee</div>
+  <div class="item coffee">Eureka Cafe</div>
+  
+  <div class="item lunch">Naf Naf Grill</div>
+  <div class="item lunch">Veggie Grill</div>
+  <div class="item lunch">Potbelly</div>
+  
+  <div class="item desert">Dairy Queen</div>
+  <div class="item desert">Andy’s Frozen Custard</div>
+  <div class="item desert">Nana’s Ice Cream</div>
+
+  <script>
+    function filter(cat) {
+      let items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        if (cat === 'all' || item.classList.contains(cat)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
